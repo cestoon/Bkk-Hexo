@@ -137,6 +137,18 @@ hr.small
         font-size 80px
   .post-heading
     h1
+      font-size 30px  // 减小文章标题字体
+    @media only screen and (min-width: 768px)
+      h1
+        font-size 45px  // 减小大屏幕下的标题字体
+
+.container
+  width 90%  // 增加容器宽度
+  @media only screen and (min-width: 768px)
+    width 85%
+    max-width 1200px  // 设置最大宽度
+  .post-heading
+    h1
       font-size 35px
     .subheading, .meta
       line-height 1.1
@@ -191,10 +203,10 @@ hr.small
   @media only screen and (min-width: 768px)
     > a
       > .post-title
-        font-size 36px
+        font-size 30px
 
 .section-heading
-  font-size 36px
+  font-size 30px
   margin-top 60px
   font-weight 700
 
@@ -223,7 +235,7 @@ hr.small
 .archive-before-pagination
   height 30px
 footer
-  padding 50px 0 65px
+  padding 20px 0 20px
   .list-inline
     margin 0
     padding 0

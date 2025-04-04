@@ -1,7 +1,7 @@
 ---
 title:  命理学批判 - 关于算命的一点思考
 date: "2023-01-05 10:05:53"
-description: 基于以前做的一篇日记，由命理学发端的一些纯个人想法
+subtitle: 基于以前做的一篇日记，由命理学发端的一些纯个人想法
 tags: ["命理"]
 ---
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
