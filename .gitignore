@@ -8,4 +8,6 @@ _multiconfig.yml
 .history/
 yarn.lock
 yarn-error.log
-yarn.lock
+
+# 确保主题文件夹不被忽略
+# themes/
