@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Bkk's Blog
-subtitle: '饼KK的个人空间'
-description: '记录生活，分享技术'
+title: Bkk's Space
+subtitle: '饼困困的个人空间'
+description: '一个很菜又很爱思考的普通人'
 keywords: blog, tech, life
-author: Bin
+author: BingKunKun
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
@@ -96,7 +96,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: clean-blog
+theme: my-clean-blog
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
