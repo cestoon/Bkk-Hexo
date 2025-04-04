@@ -11,3 +11,5 @@ yarn-error.log
 
 # 确保主题文件夹不被忽略
 # themes/
+# 确保netlify.toml不被忽略
+netlify.toml
