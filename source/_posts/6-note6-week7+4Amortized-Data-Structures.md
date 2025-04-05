@@ -95,7 +95,7 @@ tags: ["算法", "数据结构", "学习笔记"]
 
    - **Doubling操作**：如果数组已满（元素数等于数组大小），复制元素添加到双倍大小的新数组中
 
-     ![image-20230507174725696](/images/Algorithm-big-data/image-20230507174725696.png)
+     ![image-20230507174725696](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507174725696.png)
 
    - 这么做的结果是：
 
@@ -104,7 +104,7 @@ tags: ["算法", "数据结构", "学习笔记"]
 
 3. **动态表的账户法分析**
 
-   ![image-20230507213254265](/images/Algorithm-big-data/image-20230507213254265.png)
+   ![image-20230507213254265](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507213254265.png)
 
    没到一半的时候，插入消耗1，同时存2
 
@@ -118,7 +118,7 @@ tags: ["算法", "数据结构", "学习笔记"]
 
 4. **动态表的势能法分析**
 
-   <img src="/images/Algorithm-big-data/image-20230507214305729.png" alt="image-20230507214305729.png" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507214305729.png" alt="image-20230507214305729.png" style="zoom:50%;" />
 
 <h2 id="Splay-Trees">Splay Trees 旋转树</h2>
 
@@ -159,21 +159,21 @@ tags: ["算法", "数据结构", "学习笔记"]
 
 1. **右/左旋转 right/left :** 用来形容x没有爷爷的时候的情况
 
-   <img src="/images/Algorithm-big-data/image-20230507220421346.png" alt="image-20230507220421346.png" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507220421346.png" alt="image-20230507220421346.png" style="zoom:50%;" />
 
 2. **Zig-zag(or zag-zig)**: 当x或者p(x)是左儿子，其他东西是右儿子的时候, 旋转x两次
 
-   <img src="/images/Algorithm-big-data/image-20230507220713367.png" alt="image-20230507220713367.png" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507220713367.png" alt="image-20230507220713367.png" style="zoom:50%;" />
 
    在Zig-zag伸展树中，节点的旋转方式是“Z”字形的，具体来说，它包括两个操作：Zig和Zag。当一个节点成为其父节点的右孩子，而父节点又成为其祖父节点的左孩子时，就需要进行Zig操作；而当一个节点成为其父节点的左孩子，而父节点又成为其祖父节点的右孩子时，就需要进行Zag操作。
 
-   <img src="/images/Algorithm-big-data/image-20230507222748761.png" alt="image-20230507222748761.png" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507222748761.png" alt="image-20230507222748761.png" style="zoom:50%;" />
 
    当x和它的父节点y都是它们父节点的左侧或右侧子节点时，我们首先旋转y，然后再旋转x。
 
 3. **roller-coaster:** 如果 x 和 p(x) 要么都是左儿子或者都是右儿子，即一条线，旋转一次
 
-   <img src="/images/Algorithm-big-data/image-20230507221227416.png" alt="image-20230507221227416.png" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507221227416.png" alt="image-20230507221227416.png" style="zoom:50%;" />
 
    Roller-coaster伸展树的旋转方式更加复杂，它可以被视为一系列Zig和Zag操作的交替进行。具体来说，每次对一个节点进行伸展操作时，都会沿着从该节点到根节点的路径交替进行Zig和Zag操作，直到该节点成为根节点为止。
 
@@ -184,7 +184,7 @@ tags: ["算法", "数据结构", "学习笔记"]
 - Search(x)：使用常规搜索算法查找包含键x的节点（或前驱/后继）。将找到的节点伸展到根节点。
 - Insert(x)：使用二叉搜索树的算法插入包含键x的节点。将插入的节点伸展到根节点。
 - Delete(x)：查找节点x，将其伸展到根节点并删除它。树现在被分成两个子树。在左子树中查找键值最大的节点，将其伸展到根并通过将其作为新根节点连接到右子树中（也可以右子树找最小的放到根链接左子树）。
-  ![image-20230507224222701](/images/Algorithm-big-data/image-20230507224222701.png)
+  ![image-20230507224222701](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507224222701.png)
 
 #### Analysis of splay trees 旋转树分析
 
@@ -214,7 +214,7 @@ tags: ["算法", "数据结构", "学习笔记"]
 
 **证明**：
 
-![image-20230507231153030](/images/Algorithm-big-data/image-20230507231153030.png)
+![image-20230507231153030](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507231153030.png)
 
 <h2 id="ddgeo">Dynamic Graphs: Dynamic edge orientation 动态图：动态边定向</h2>
 
@@ -257,13 +257,13 @@ tags: ["算法", "数据结构", "学习笔记"]
 
    ▶ 摊销算法
 
-拿上文提到的splay trees为例<img src="/images/Algorithm-big-data/image-20230507232917288.png" alt="image-20230507232917288.png" style="zoom:50%;" />
+拿上文提到的splay trees为例<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507232917288.png" alt="image-20230507232917288.png" style="zoom:50%;" />
 
 我们需要动态插入节点1...10，这个过程需要旋转。我们需要分析这个结构，则会用到potential function，摊销使我们能够从一个新的角度来解决这个问题，应用不同的想法
 
 <h3 id="Sparse-graphs">Sparse graphs：稀疏图</h3>
 
-<img src="/images/Algorithm-big-data/image-20230507233640156.png" alt="image-20230507233640156.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507233640156.png" alt="image-20230507233640156.png" style="zoom:50%;" />
 
 稀疏图是指顶点数较多，但边数相对较少的图。衡量稀疏度（sparsity）的是度数（Arboricity） ≤ c
 
@@ -287,7 +287,7 @@ tags: ["算法", "数据结构", "学习笔记"]
 
 **动态有界出度方向问题**：指的是在一个动态图中，**为每个顶点分配一个出度方向**，**并保证每个顶点的出度不超过一个给定的常数**。在这样的图中，可以进行插入和删除边的操作，同时保持出度方向的约束。
 
-<img src="/images/Algorithm-big-data/image-20230508010617324.png" alt="image-20230508010617324.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508010617324.png" alt="image-20230508010617324.png" style="zoom:50%;" />
 
 初始化: 
 
@@ -310,7 +310,7 @@ tags: ["算法", "数据结构", "学习笔记"]
 
 全知算法可以在常数时间内处理插入和删除边的操作，同时保持出度方向的约束。这是通过在图上执行一系列的局部调整来实现的，从而保持整个图的有界出度方向。全知算法是一种理论上的算法，其主要用途是作为参考算法，用于衡量其他算法的性能和效率。在实际应用中，全知算法的时间复杂度很难达到最优，因此需要采用其他的数据结构和算法来实现动态有界出度方向。
 
-<img src="/images/Algorithm-big-data/image-20230507235131255.png" alt="image-20230507235131255.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507235131255.png" alt="image-20230507235131255.png" style="zoom:50%;" />
 
 聊聊算法细节
 
@@ -344,7 +344,7 @@ tags: ["算法", "数据结构", "学习笔记"]
 
 <h4 id="putting-it-together">putting it together</h4>
 
-![image-20230508011647947](/images/Algorithm-big-data/image-20230508011647947.png)
+![image-20230508011647947](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508011647947.png)
 
 如果使用**贪心算法**，如果出现了overflow（而不是6α）就翻转所有的edge直到没有溢出
 

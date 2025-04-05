@@ -37,7 +37,7 @@ tags: ["学习笔记", "软件工程", "系统集成"]
 
 **UML（统一建模语言）是一种标准化的可视化语言，它提供了一套图形符号和语义来表示软件系统中的各种元素和关系**，开发者可以用它来做设计，产品经理可以用它来讲解业务逻辑，测试人员可以用来模拟测试用例，图形化保证老板也能看懂，哪怕只是用来归档也是极好的。之所以它能降低相关人员(stakeholders)的沟通成本，还是因为它提供了系统结构和行为的清晰表述，它的核心逻辑是**Modeling(建模/模拟)**，而且是面向对象设计的建模，所以还可以把UML当作面向对象的可视化，还可以自动生成代码。
 
-<img src="/images/system-integration/image-20230401204644087.png" alt="image-20230401204644087" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230401204644087.png" alt="image-20230401204644087" style="zoom:80%;" />
 
 它能在设计系统、集成过程、测试系统各个环节应用，梳理清楚思路的同时，还能大幅提升沟通效率（团队工作过的人都明白沟通到底有多重要），是可以满足系统集成的很多要求的重要工具，与他相关的软件、中间件也不少，可以用来生成代码。
 
@@ -75,19 +75,19 @@ UML包括各种图，共三类，十三种：
 图书馆借书系统为例
 
 1. **用例图：**
-   <img src="/images/system-integration/image-20230401215449062.png" alt="image-20230401215449062" style="zoom:80%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230401215449062.png" alt="image-20230401215449062" style="zoom:80%;" />
 
 2. **组件图**：
 
    这里有Library接口，以及library的实现
-   <img src="/images/system-integration/image-20230401215539520.png" alt="image-20230401215539520" style="zoom:80%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230401215539520.png" alt="image-20230401215539520" style="zoom:80%;" />
 
 3. 类图
 
-   <img src="/images/system-integration/image-20230401220021723.png" alt="image-20230401220021723" style="zoom:30%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230401220021723.png" alt="image-20230401220021723" style="zoom:30%;" />
 
 4. 状态机
-   <img src="/images/system-integration/image-20230401220043478.png" alt="image-20230401220043478" style="zoom:30%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230401220043478.png" alt="image-20230401220043478" style="zoom:30%;" />
 
 5. 用例图
 
@@ -98,7 +98,7 @@ UML包括各种图，共三类，十三种：
    - 扫描书
    - 系统确认
 
-   <img src="/images/system-integration/image-20230401220149587.png" alt="image-20230401220149587" style="zoom:30%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230401220149587.png" alt="image-20230401220149587" style="zoom:30%;" />
 
 <h3 id="UML语法">UML 语法</h3>
 
@@ -121,7 +121,7 @@ UML包括各种图，共三类，十三种：
 
 3. 活动图 activity diagram
 
-   <img src="/images/system-integration/image-20230402145947279.png" alt="image-20230402145947279" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230402145947279.png" alt="image-20230402145947279" style="zoom:50%;" />
 4. [时序图、活动图][4]
 
 <h2 id="Requirements_Domain_Cases">Requirements, Domain, Cases 需求,领域,用例</h2>
@@ -155,7 +155,7 @@ UML包括各种图，共三类，十三种：
 - 对于非功能性的需求，重点是可衡量，能测试。不要用可以，能够，可达到的字眼，要给出可量化的衡量标准。
 
 这些需求最后都是要落实于文档的，如果你家的产品经理说的时候头头是道，逻辑能够自洽，但给文档却不详细，不可量化，最后导致项目交付不及时或者质量有缺陷，那需求分析是没有做到位的。
-<img src="/images/system-integration/image-20230401224449502.png" alt="image-20230401224449502" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230401224449502.png" alt="image-20230401224449502" style="zoom:80%;" />
 
 想法与实际有巨大的模糊空间，这时候领域建模，实际用例，就可以派上用场了。
 
@@ -173,7 +173,7 @@ UML包括各种图，共三类，十三种：
 <h3 id="use-case">Use Case 用例</h3>
 
 用例是用来描绘某个场景下用户与系统的交互，对应的工具即是用例图：
-<img src="/images/system-integration/image-20230401230034529.png" alt="image-20230401230034529" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230401230034529.png" alt="image-20230401230034529" style="zoom:50%;" />
 
 用例图能给系统功能概述，一张图背后能表达的内容能用以下模版表示
 
@@ -197,7 +197,7 @@ UML包括各种图，共三类，十三种：
 用户讲的故事表面看起来很幼稚，但实际上很重要。收集他们也是需求分析很重要的部分，这也是系统更新动力的主要来源。
 
 最直观的方式便是做一个便签墙（老外对sticker真的有执念...）。
-<img src="/images/system-integration/image-20230402145818325.png" alt="image-20230402145818325" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230402145818325.png" alt="image-20230402145818325" style="zoom:50%;" />
 
 相关的电子版工具可以用[trello](trello.com) 或者[miroBoard](https://miro.com/)
 
@@ -209,14 +209,14 @@ UML包括各种图，共三类，十三种：
 
 测试内容偏向于业务还是技术？如果是业务内容，可能更关注于验收是否满足用户要求和功能的稳定性；如果是技术测试，可能更关注于代码实现或者性能。自然采取的策略也会不同。
 
-<img src="/images/system-integration/image-20230401232654609.png" alt="image-20230401232654609" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230401232654609.png" alt="image-20230401232654609" style="zoom:67%;" />
 
 最常用的概念还是验收测试，QA发现问题，然后程序员改,，或者拖延为下一个迭代的需求。这个过程可以用一个活动图表示。
 
-<img src="/images/system-integration/image-20230402124111779.png" alt="image-20230402124111779" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230402124111779.png" alt="image-20230402124111779" style="zoom:67%;" />
 
 这时可以意识到，用例（use case)除了能展示需求，也是测试重要的参考内容。
-<img src="/images/system-integration/image-20230402124237376.png" alt="image-20230402124237376" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230402124237376.png" alt="image-20230402124237376" style="zoom:50%;" />
 
 手工测试是很恶心的（manual tests are immoral！），而且QA资源往往也是稀缺的，能自动化就尽量自动化。
 
@@ -233,17 +233,17 @@ UML包括各种图，共三类，十三种：
    > java -jar fitnesse-standalone.jar
 
 3. 打开本地链接：http://localhost/，端口默认80
-   <img src="/images/system-integration/image-20230402131152875.png" alt="image-20230402131152875" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230402131152875.png" alt="image-20230402131152875" style="zoom:50%;" />
 
 4. 点击edit，创建wiki page。
-   ![image-20230402141114565](/images/system-integration/image-20230402141114565.png)
+   ![image-20230402141114565](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230402141114565.png)
 
 5. 对代码进行编译
 
    > javac -cp fitnesse-standalone.jar:. fitexample/CounterFixture.java
 
 6. 点击测试
-   <img src="/images/system-integration/image-20230402141155128.png" alt="image-20230402141155128" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230402141155128.png" alt="image-20230402141155128" style="zoom:50%;" />
 
 个人感觉上手确实很简单，也轻量级，wiki文档确实利于维护沟通，不过依然无法逃脱维护case麻烦的问题。有QA资源的团队可以考虑，详细的看[fitness用户指导](http://www.fitnesse.org/FitNesse.UserGuide)
 

@@ -43,7 +43,7 @@ tags: ["学习笔记", "软件工程", "系统集成"]
 
 **CRC是class responsibility collaboration**的缩写，是一个面向对象设计的分析问题的工具，可以用它来辅助设计类
 
-![image-20230404120121795](/images/system-integration/image-20230404120121795.png)
+![image-20230404120121795](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230404120121795.png)
 <h2 id="Requirements_to_Design">Requirements to Design:CRC Cards 需求到设计-CRC卡</h2>比如思考图书馆理系统，先用CRC cards写下所有的类，比如：User，Book, Library Application。然后思考这几个类之间的交互关系（collaboraion)。比如借书、书过期等。使用CRC，可以保证自己一直处于面向对象的思考过程，避免那种设计系统，但却总是宏观和笼统，无法进入系统的思维模式。
 
 <h2 id="Components_structure">Components 组件设计</h2>
@@ -57,7 +57,7 @@ tags: ["学习笔记", "软件工程", "系统集成"]
 - 可重用Resuable
 - 可插拔Pluggable
 
-![image-20230404121903798](/images/system-integration/image-20230404121903798.png)
+![image-20230404121903798](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230404121903798.png)
 
 需要辨析几个概念
 类class, 组件components, 微服务microservices
@@ -75,7 +75,7 @@ tags: ["学习笔记", "软件工程", "系统集成"]
  - 用来做系统概览
  - 用来系统集成概览
 
-![image-20230405143529832](/images/system-integration/image-20230405143529832.png)
+![image-20230405143529832](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230405143529832.png)
 
 类图的组成结构：
  - Classes 类别
@@ -84,20 +84,20 @@ tags: ["学习笔记", "软件工程", "系统集成"]
    - getter setter 应该是publicd的
  - 方法
  - 关联 Associations
-   ![image-20230404171301292](/images/system-integration/image-20230404171301292.png)
+   ![image-20230404171301292](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230404171301292.png)
  - 角色名
  - 多重性 multiplicity
  - 泛化 generalization
 
 
 包的UML表示：
-<img src="/images/system-integration/image-20230404173022650.png" alt="image-20230404173022650" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230404173022650.png" alt="image-20230404173022650" style="zoom:67%;" />
 <h2 id="Components_and_Synchronous_Communication">Components and Synchronous Communication 组件同步通讯</h2>
 <h3 id="Synchronous_Bank">银行ATM同步系统</h3>
-<img src="/images/system-integration/image-20230405153109356.png" alt="image-20230405153109356" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230405153109356.png" alt="image-20230405153109356" style="zoom:80%;" />
 
 详细的银行类图设计
-![image-20230405153251431](/images/system-integration/image-20230405153251431.png)
+![image-20230405153251431](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230405153251431.png)
 
 <h3 id="Components_Bank">银行ATM组件分析</h3>
 
@@ -112,7 +112,7 @@ tags: ["学习笔记", "软件工程", "系统集成"]
     - 接口要被使用
     - 类的行为与生命周期一致
 
-![image-20230404133950016](/images/system-integration/image-20230404133950016.png)
+![image-20230404133950016](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230404133950016.png)
 
 
 <h2 id="Life_Cycle_State_Machines">Life Cycle State Machines 状态机</h2>
@@ -124,7 +124,7 @@ tags: ["学习笔记", "软件工程", "系统集成"]
 -  保险柜门只有在candle被更换后key转动的情况下开启
 -  如果在没有更换蜡烛的情况下转动钥匙，一个杀手兔子被释放
 
-<img src="/images/system-integration/image-20230405152801962.png" alt="image-20230405152801962" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230405152801962.png" alt="image-20230405152801962" style="zoom:50%;" />
 
 <h2 id="w7_Contract_and_OCL">Design by Contract and OCL 合同和OCL设计</h2>
 
@@ -164,7 +164,7 @@ OCL中的**合同（Contracts）**是一种规范
    - 函数
 5. 表示法
    内容放进花括号{}
-   ![image-20230406143944641](/images/system-integration/image-20230406143944641.png)
+   ![image-20230406143944641](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230406143944641.png)
 6. OCL语法
    - 数据类型：
      - 基础类型Integer real Boolean String
@@ -181,10 +181,10 @@ OCL中的**合同（Contracts）**是一种规范
 
 举个例子：银行系统加上了限制（constraints）
 
-![image-20230406143409925](/images/system-integration/image-20230406143409925.png)
+![image-20230406143409925](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230406143409925.png)
 
 再给个OCL的例子
-![image-20230406144611389](/images/system-integration/image-20230406144611389.png)
+![image-20230406144611389](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230406144611389.png)
 
 <h2 id="w8_Sequence_Diagrams_and_Use_Case">Sequence Diagrams and Use Case Realizations 顺序图和用例实现</h2>
 
@@ -194,7 +194,7 @@ OCL中的**合同（Contracts）**是一种规范
 
 这里给出主要组成结构
 
-![image-20230406145545626](/images/system-integration/image-20230406145545626.png)
+![image-20230406145545626](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230406145545626.png)
 
 画顺序图主要是以下流程
 
@@ -203,7 +203,7 @@ OCL中的**合同（Contracts）**是一种规范
 
 <h3 id="w8_use_case_realization">Use Case Realizations 用例实现</h3>
 
-![image-20230406150213292](/images/system-integration/image-20230406150213292.png)
+![image-20230406150213292](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230406150213292.png)
 
 用例是UML系统中比较特殊的一块，因为UML这一整套语言有很多的图表，但是系统只有一个，模型只有一个，用例即是系统的表述，众多的图表也只是用例的辅助表达。（Many diagrams, but only one model）
 用例的实现/图形化，也是有选择和策略的，要看你着重哪些方面
@@ -233,6 +233,6 @@ OCL中的**合同（Contracts）**是一种规范
 
    4. 设计OCL限制，细化逻辑
 
-![image-20230406151415431](/images/system-integration/image-20230406151415431.png)
+![image-20230406151415431](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230406151415431.png)
 
 切记，众多图表，但只有一个模型

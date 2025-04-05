@@ -22,7 +22,7 @@ Range Report problem 范围报告问题
 
 举个例子
 
-<img src="./image-20230507143455170.png" alt="image-20230507143455170.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507143455170.png" alt="image-20230507143455170.png" style="zoom:50%;" />
 
 给一个点阵，要求支持操作report(x1,y1,x2,y2)返回p与R交集的点，这也叫orthogonal range queries
 
@@ -42,7 +42,7 @@ Range Report problem 范围报告问题
 
 会发现，输出时间取决于输出的大小，如果要简化这个问题，只用比较技巧不用哈希或者bit怎么办？
 
-![image-20230507145007753](./image-20230507145007753.png)
+![image-20230507145007753](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507145007753.png)
 
 - 把它存到一个排序过的数组中(一维可以不用BST)
 - 对于操作report(x1,x2):  二分查找x1的prodecesor, 然后遍历数组找到x2的successor
@@ -74,13 +74,13 @@ Range Report problem 范围报告问题
    - x 坐标上构建完美平衡二叉树
    - 每个节点v 存储v 下面按y 坐标**排序的**点数组。
 
-   <img src="./image-20230507151014330.png" alt="image-20230507151014330.png" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507151014330.png" alt="image-20230507151014330.png" style="zoom:50%;" />
 
    - **空间： O(n) + O(n log n) = O(n log n).**
    - 预处理时间： O(n log n)
 
 2. 查询report(x1, y1, x2, y2):
-   ![image-20230507152836311](./image-20230507152836311.png)
+   ![image-20230507152836311](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507152836311.png)
 
    - 过程
 
@@ -117,14 +117,14 @@ Range Report problem 范围报告问题
 
 实现一个操作predecessor(x):  能返回x在S1, S2, …, Sk中的**所有前继**
 
-![image-20230507153515941](./image-20230507153515941.png)
+![image-20230507153515941](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507153515941.png)
 
 **目标：**实现嵌套集中的前继查询占用O(n)空间和O(logn+k)的查询时间
 
 **实现分成三步：**
 
 1. **Sorted Arrays 排序数组 ：慢，线性空间**
-   ![image-20230507153900549](./image-20230507153900549.png)
+   ![image-20230507153900549](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507153900549.png)
 
    - Predecessor：每个set都是一个排序的数组，查询前继的话就是每个数组都做二分查询
 
@@ -133,7 +133,7 @@ Range Report problem 范围报告问题
 
 2. **tabulation 表格：快，空间爆炸**
 
-   ![image-20230507154018580](./image-20230507154018580.png)
+   ![image-20230507154018580](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507154018580.png)
 
    - 数据结构：排序的S1,然后每个S的前继记录下来
    - Predecessor(x): 在S1二分查找位置，然后表中获取前继
@@ -142,7 +142,7 @@ Range Report problem 范围报告问题
 
 3. **Sorted arrays with bridges.：快，空间少**
 
-   ![image-20230507154301255](./image-20230507154301255.png)
+   ![image-20230507154301255](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507154301255.png)
 
    - 数据结构：每个集合的排序数组+桥（bridges）
 
@@ -162,7 +162,7 @@ Range Report problem 范围报告问题
 
 之前的2D range tree，每一层都要做一次二分查找，比较慢，接下来用桥的思路做优化。
 
-![image-20230507155534611](./image-20230507155534611.png)
+![image-20230507155534611](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507155534611.png)
 
 1. 思路
 
@@ -192,7 +192,7 @@ kd树允许我们仅使用O(n)的存储空间，但我们必须在额外的查�
 
 #### The 2D tree (k = 2)
 
-<img src="./image-20230507162024966.png" alt="image-20230507162024966.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507162024966.png" alt="image-20230507162024966.png" style="zoom:50%;" />
 
 - 基于点集P的平衡二叉树
 - 通过交替使用水平和垂直线将P递归地划分为包含（大致）相同数量的点的矩形区域。 

@@ -14,3 +14,4 @@ public/
 # themes/
 # 确保netlify.toml不被忽略
 netlify.toml
+.env

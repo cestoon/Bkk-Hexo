@@ -51,7 +51,7 @@ tags: ["算法", "数据结构", "学习笔记"]
 
 从链式哈希入手
 
-![image-20230505144633347](/images/Algorithm-big-data/image-20230505144633347.png)
+![image-20230505144633347](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230505144633347.png)
 
 链式哈希：链式哈希是一种哈希表的实现方法，它使用链表来解决哈希冲突。
 
@@ -69,7 +69,7 @@ We can evaluate h in O(1) time
 
 定量计算一下：
 
-![image-20230505151635028](/images/Algorithm-big-data/image-20230505151635028.png)
+![image-20230505151635028](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230505151635028.png)
 
 h(x) 是函数本身，E代表链表的长度,S是键值域。假设y $\in$ S，h(y) = h(x)。E的大小等于h(y) = h(x)数量的和。
 
@@ -119,23 +119,23 @@ Universal Hashing 可以在以下情况下解决字典问题(没有特殊假设)
 
 位置制数的概念可以放进通用哈希
 
-![image-20230505170158366](/images/Algorithm-big-data/image-20230505170158366.png)
+![image-20230505170158366](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230505170158366.png)
 
 取一个素数7，给一个范围a，x是输入范围，根据如图定义的哈希函数。$h_{a}(x)$，可以把424放入槽为4的桶中，同时保证了均匀性。a是从H这个哈希函数族中随机取的，这个过程构建很快。
 
 除了以上的哈希函数，还有别的哈希函数，比如inverse
 
-![image-20230505170717622](/images/Algorithm-big-data/image-20230505170717622.png)
+![image-20230505170717622](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230505170717622.png)
 
 假设m=7， 要求a•a-1 mod 7 =1，则对于a = {1...6}
 
-<img src="/images/Algorithm-big-data/image-20230505171220679.png" alt="image-20230505171220679.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230505171220679.png" alt="image-20230505171220679.png" style="zoom:50%;" />
 
 回到定义，通用哈希希望冲突概率≤1/m
 
 证明如下：
 
-![image-20230505172149902](/images/Algorithm-big-data/image-20230505172149902.png)
+![image-20230505172149902](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230505172149902.png)
 
 <h3 id="Static-Dictionaries-and-Perfect-Hashing">Static Dictionaries and Perfect Hashing 静态字典与完美哈希</h3>
 
@@ -164,7 +164,7 @@ Universal Hashing 可以在以下情况下解决字典问题(没有特殊假设)
    具体思路就是把1的空间换成n
 
 3. Solution 3. Two-level solution. 两层模式  FKS scheme
-   ![image-20230505174354272](/images/Algorithm-big-data/image-20230505174354272.png)
+   ![image-20230505174354272](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230505174354272.png)
 
    在第1级使用有很多冲突和线性空间的解决方案。
 
@@ -197,11 +197,11 @@ Universal Hashing 可以在以下情况下解决字典问题(没有特殊假设)
 
 假设有集合S,支持以下操作
 
-<img src="/images/Algorithm-big-data/image-20230506112008708.png" alt="image-20230506112008708.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230506112008708.png" alt="image-20230506112008708.png" style="zoom:50%;" />
 
 2. 经典方法和结果
 
-   ![image-20230506112138373](/images/Algorithm-big-data/image-20230506112138373.png)
+   ![image-20230506112138373](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230506112138373.png)
 
    这些是关于前驱/后继问题的经典解决方案，大约是1993年左右的。
 
@@ -225,18 +225,18 @@ Universal Hashing 可以在以下情况下解决字典问题(没有特殊假设)
 
       这种情况下查找Predecessor(x) 也就是walk left，需要时间O(u)，u是bitvector的长度
 
-      ![image-20230506114214608](/images/Algorithm-big-data/image-20230506114214608.png)
+      ![image-20230506114214608](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230506114214608.png)
 
       
 
    2. **S2: 两层位向量bitvector**
-      ![image-20230506114342395](/images/Algorithm-big-data/image-20230506114342395.png)
+      ![image-20230506114342395](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230506114342395.png)
 
       把数组拆为上层大小$u^{1/2}$的数组，和下层同样大小的且数量为$u^{1/2}$的数组。如果小数组里面有的话，上层数组对应位置为1，否则为0。查询的时候先在对应小数组里面找，小数组没有上大数组，然后再去小数组里面找。每个数组找需要$u^{1/2}$的时间，一共Time. O($u^{1/2}$ + $u^{1/2}$ + $u^{1/2}$) = O($u^{1/2}$)
 
    3. **Solution3: 两层位向量，不过换查找方式**
 
-      ![image-20230506115429587](/images/Algorithm-big-data/image-20230506115429587.png)
+      ![image-20230506115429587](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230506115429587.png)
 
       在这种情况下，每个底部的数组记录min和max
 
@@ -251,13 +251,13 @@ Universal Hashing 可以在以下情况下解决字典问题(没有特殊假设)
 
    4. 3的基础上再来一层
 
-      ![image-20230506121135207](/images/Algorithm-big-data/image-20230506121135207.png)
+      ![image-20230506121135207](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230506121135207.png)
 
       递归一层的话，时间可以节省为$(u^{1/2})^{1/2}$ = $O(u^{1/4})$
 
    5. van Emde Boas：
 
-      ![image-20230506121352188](/images/Algorithm-big-data/image-20230506121352188.png)
+      ![image-20230506121352188](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230506121352188.png)
 
       递归的处理直到每个小数组为常量
 
@@ -286,7 +286,7 @@ Universal Hashing 可以在以下情况下解决字典问题(没有特殊假设)
 1. **tries**
 
 
-   ![image-20230312124159471](/images/Algorithm-big-data/image-20230312124159471.png)
+   ![image-20230312124159471](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230312124159471.png)
 
    上面的树表示了一个大小为 u=16 的 universe 的 trie。每个元素都被视为从根到叶子的路径，按顺序给出数字的位。处于活跃根到叶子路径上的节点（对应于 S 中的某些元素）被标记为 1。或者，如果一个节点下面有一个叶子对应于 S 中的一个元素，则将该节点设置为 1。
 
@@ -326,7 +326,7 @@ Universal Hashing 可以在以下情况下解决字典问题(没有特殊假设)
 
    Y-Fast Trie是一种基于Trie树和有序表的数据结构，如图
 
-   ![image-20230427233236508](/images/Algorithm-big-data/image-20230427233236508.png)
+   ![image-20230427233236508](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230427233236508.png)
 
    > BBST的全称是Balanced Binary Search Trees，即平衡二叉搜索树，也称为自平衡二叉搜索树（Self-Balancing Binary Search Tree），是一种保持树平衡的二叉搜索树。它们通过旋转操作等方法维护树的平衡，使得每个节点的左右子树高度差不超过1，从而保证在最坏情况下的时间复杂度为O(log n)。
    >

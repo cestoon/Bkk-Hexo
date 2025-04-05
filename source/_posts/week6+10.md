@@ -27,7 +27,7 @@ tags: ["学习笔记", "人工智能", "多智能体系统"]
 
 <h2 id="w6_Conflict_based_search">Conflict based search 基于冲突的搜索</h2>
 
-<img src="/images/MAS/image-20230416223327761.png" alt="image-20230416223327761.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230416223327761.png" alt="image-20230416223327761.png" style="zoom:50%;" />
 
 **基于冲突的搜索（Conflict-based Search CBS）**, 是一个用来解决**多智能体路径规划问题（Multi-Agent Pathfinding Problem）**的算法，它的目标是在一个给定的环境中为多个智能体找到无碰撞的路径，其核心思想是通过检测并解决智能体之间的冲突来达到理想解。算法从智能体之间的约束冲突开始，通过不断迭代来寻找冲突的最佳解决方案。
 
@@ -54,7 +54,7 @@ tags: ["学习笔记", "人工智能", "多智能体系统"]
 6. 如果存在一组长度为d的（最短）动作序列，可以使得所有智能体都到达它们各自的目标，则我们称解的**深度(solution depth)为d**。
 7. **最坏情况Worst case:**  最坏情况下，我们需要检查所有深度为d的搜索树分支，即需要扩展$b^{kd}$个状态， 所以时间/空间复杂度的上限也就是$b^{kd}$
 
-<img src="/images/MAS/image-20230417163140682.png" alt="image-20230417163140682.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230417163140682.png" alt="image-20230417163140682.png" style="zoom:50%;" />
 
 上图，网格域，分支因子b=5：Move(N), Move(E), Move(S), Move(W), Noop；k=4 个agent；解的深度为d。如果没有启发式，空间状态db^k = 7 × 5^4 ≈ 4300 states(!)
 
@@ -70,7 +70,7 @@ tags: ["学习笔记", "人工智能", "多智能体系统"]
 
 Space-time A* (STA*): 在A *的基础上考虑了时间限制
 
-<img src="/images/MAS/image-20230417173709665.png" alt="image-20230417173709665.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230417173709665.png" alt="image-20230417173709665.png" style="zoom:50%;" />
 
 定义：一个constraint约束条件 (a,v,t) 表示在时间 t 时，智能体 a 不允许处于位置 v ∈ V
 
@@ -95,7 +95,7 @@ def SpaceTimeAStar(problem , agents):
 
 - STA * 考虑了约束，但是并不理想（optimal），也不完备（complete）
 
-  <img src="/images/MAS/image-20230417175038960.png" alt="image-20230417175038960.png" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230417175038960.png" alt="image-20230417175038960.png" style="zoom:50%;" />
 
 - 理想情况下
 
@@ -163,11 +163,11 @@ def IndependenceDetection(problem , agents):
 
 冲突分为三种1. vertex conflict 顶点冲突，2. edge conflict 边缘冲突，3.Follow conflict 跟随冲突
 
-<img src="/images/MAS/image-20230417181613113.png" alt="image-20230417181613113.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230417181613113.png" alt="image-20230417181613113.png" style="zoom:50%;" />
 
 #### 实例
 
-<img src="/images/MAS/image-20230417181500068.png" alt="image-20230417181500068.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230417181500068.png" alt="image-20230417181500068.png" style="zoom:50%;" />
 
 蓝色需要走8步，红色走7步，cost = 7+8 = 15，能发现红蓝agent在t=4的时候位置D5冲突
 
@@ -177,7 +177,7 @@ def IndependenceDetection(problem , agents):
 
 然后，蓝色红色agent分别进行推演，计算cost
 
-<img src="/images/MAS/image-20230417182550924.png" alt="image-20230417182550924.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230417182550924.png" alt="image-20230417182550924.png" style="zoom:50%;" />
 
 ```python
 def ConflictBasedSearch(problem , agents , cost): 
@@ -237,7 +237,7 @@ def ConflictBasedSearch(problem, agents, cost, x):
 
 <h3 id="w6_summary">总结</h2>
 
-<img src="/images/MAS/image-20230417185250064.png" alt="image-20230417185250064.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230417185250064.png" alt="image-20230417185250064.png" style="zoom:50%;" />
 
 - See (Silver, 2005) for STA*
 
@@ -285,7 +285,7 @@ def ConflictBasedSearch(problem, agents, cost, x):
 
 - 好的启发式太难找了，常常从 PDDL 描述中自动诱导的启发式不是很有效
 - 即使使用良好的启发式方法，也可能会陷入启发式高原（**heuristic plateaus**），例如在使用曼哈顿距离启发式的贪婪最佳优先搜索时出现的这个关卡：
-  <img src="/images/MAS/image-20230418105745293.png" alt="image-20230418105745293.png" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230418105745293.png" alt="image-20230418105745293.png" style="zoom:50%;" />
 - 如果我们只关心部分原子来简单地减少状态空间会怎样？在上面的例子中，如果我们只担心代理 0 的位置，状态空间会小得多
 
 <h3 id="w10_size-bounded">Planning over size-bounded states 有大小限制的状态</h3>
@@ -315,7 +315,7 @@ def ConflictBasedSearch(problem, agents, cost, x):
 
 假设有一个规划问题Π = (A,s0,g) 初始状态 s0 = {p1}, 目标 g = p4  动作集 A为{a1,a2,a3,a4,}
 
-<img src="/images/MAS/image-20230418112307521.png" alt="image-20230418112307521.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230418112307521.png" alt="image-20230418112307521.png" style="zoom:50%;" />
 
 这个问题，状态空间为: 4^A，解决方案{a2, a4}
 
@@ -337,9 +337,9 @@ IW(i)算法类似于广度优先搜索，但仅在子状态s包含至少一个�
 
 **例子(by Frederik Drachmann)**：
 
-<img src="/images/MAS/image-20230418121643562.png" alt="image-20230418121643562.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230418121643562.png" alt="image-20230418121643562.png" style="zoom:50%;" />
 
-<img src="/images/MAS/image-20230418121652409.png" alt="image-20230418121652409.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230418121652409.png" alt="image-20230418121652409.png" style="zoom:50%;" />
 
 还是块问题：这次扩展重点在于，将子状态添加到边界的，得是以前没出现过的原子
 
@@ -347,7 +347,7 @@ IW(i)算法类似于广度优先搜索，但仅在子状态s包含至少一个�
 
 回到这个MAPF问题
 
-<img src="/images/MAS/image-20230418105745293.png" alt="image-20230418105745293.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230418105745293.png" alt="image-20230418105745293.png" style="zoom:50%;" />
 
 每次迭代，确认是否进入了一个新地点，如果没有，就不添加子状态。问题也有，为了获取最佳路线，搜索树不能被裁减。Maximal # of states generated:\#loc · #agt = 51 · 5 = 255
 
@@ -357,7 +357,7 @@ IW(i)算法类似于广度优先搜索，但仅在子状态s包含至少一个�
 
 有三个动作模式：
 
-<img src="/images/MAS/image-20230418213213105.png" alt="image-20230418213213105.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230418213213105.png" alt="image-20230418213213105.png" style="zoom:50%;" />
 
 很明显，最佳方案是IncreaseP(1),IncreaseQ(1),ShortCut 和 IncreaseQ(1),IncreaseP(1),ShortCut。然而，在跌打宽度的逻辑下会跑100次IncreaseP。
 
@@ -399,7 +399,7 @@ IW(i)算法类似于广度优先搜索，但仅在子状态s包含至少一个�
 
 **SIW在一个问题上的有效宽度是在搜索过程中调用IW(i)的最大i值。**
 
-<img src="/images/MAS/image-20230418215347151.png" alt="image-20230418215347151.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230418215347151.png" alt="image-20230418215347151.png" style="zoom:50%;" />
 
 考虑用SIW处理这个推箱子问题：
 
@@ -411,7 +411,7 @@ IW(1)会找到一个最佳路径去把最上面的箱子推到目标，在这个
 
 如果我们可以push和pull，但以下这个问题并不能IW (1)迭代一次搞定
 
-<img src="/images/MAS/image-20230418220115287.png" alt="image-20230418220115287.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230418220115287.png" alt="image-20230418220115287.png" style="zoom:50%;" />
 
 agent0位于（3，4），必须移动到（3，3）去取箱子，然后向上移动到 (2, 3) 或向下移动到 (4, 3)，然后它却不能回到（3，3），因为因为没有完成任何子目标，导致0回不到（3，3），自己把自己卡住了。除非还使其他一些新原子为真。如果我们在s0状态中没有看到一个箱子在单元格（3,4）中，但是在一步操作后可以将其放置到该位置，那么这是可能的。
 
@@ -421,7 +421,7 @@ agent0位于（3，4），必须移动到（3，3）去取箱子，然后向上�
 
 迭代宽度也可以与贪心最佳优先搜索相结合，以获得最佳的效果。这种组合被称为**最佳优先宽度搜索（Best-First Width Search，Lipovetzky和Geffner，2017）**。在贪心最佳优先搜索中，IW有助于摆脱启发式平台。在最近的国际规划竞赛中，表现最好的两个规划器分别是Fast Downward Stone Soup（本课程中提到的）和最佳优先宽度搜索。
 
-<img src="/images/MAS/image-20230418221128697.png" alt="image-20230418221128697.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230418221128697.png" alt="image-20230418221128697.png" style="zoom:50%;" />
 
 我对SIW进行了一些修改，使其更加高效：
 
@@ -435,13 +435,13 @@ agent0位于（3，4），必须移动到（3，3）去取箱子，然后向上�
 
 近年来，将机器学习与自动化规划相结合的系统显著增加，例如使用机器学习来学习行动模式，使用机器学习来学习启发式等。
 
-<img src="/images/MAS/image-20230418222326830.png" alt="image-20230418222326830.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230418222326830.png" alt="image-20230418222326830.png" style="zoom:50%;" />
 
 • 使用变分自编码器（variational autoencoder）将Atari视频游戏的屏幕像素状态压缩为一组（4500）布尔特征，从本质上将像素转换为（相对）紧凑的符号表示。
 
 • 然后，使用迭代宽度（Iterated Width）的展开版本（IW meets Monte-Carlo Tree Search）在这些表示上进行规划。
 
-<img src="/images/MAS/image-20230418222726002.png" alt="image-20230418222726002.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230418222726002.png" alt="image-20230418222726002.png" style="zoom:50%;" />
 
 直接说结论啊：RA VAE-IW（1）在大多数游戏中获得了基于宽度的方法中最高的分数，并且其表现优于或可与专业人类玩家媲美。
 

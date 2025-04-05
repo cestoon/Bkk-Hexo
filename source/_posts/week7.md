@@ -115,7 +115,7 @@ FIPA-ACL消息可以在主体中包含更多参数，例如语言（**language**
 4. **授予任务 (Awarding the task)** : 代理A根据竞标信息选择最合适的竞标，并通过授予消息将其通知给竞标者。
 5. **加快任务 (Expediting task):** 成功承包商加快任务进程。
 
-<img src="/images/MAS/image-20230417211857794.png" alt="image-20230417211857794.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230417211857794.png" alt="image-20230417211857794.png" style="zoom:50%;" />
 
 <h4 id="w7_FIPA-contract-net">The Contract Net via FIPA-ACL messages 合同网通过FIPA-ACL</h4>
 
@@ -125,7 +125,7 @@ FIPA-ACL消息可以使用以下表述来在多智能体系统中实现合同网
 • accept-proposal (接受提议)，reject-proposal (拒绝提议)。用于授予任务。 
 • inform (通知)，failure (失败)。用于指示完成或失败。
 
-<img src="/images/MAS/image-20230417212540665.png" alt="image-20230417212540665.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230417212540665.png" alt="image-20230417212540665.png" style="zoom:50%;" />
 
 <h4 id="w7_result-sharing">result sharing 成果共享</h4>
 
@@ -142,7 +142,7 @@ FIPA-ACL消息可以使用以下表述来在多智能体系统中实现合同网
 
 3. 协调关系的类型学，如图
 
-   <img src="/images/MAS/image-20230417214551889.png" alt="image-20230417214551889.png" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230417214551889.png" alt="image-20230417214551889.png" style="zoom:50%;" />
 
 <h3 id="w7_Agent-architectures">Agent architectures 智能体架构</h3>
 

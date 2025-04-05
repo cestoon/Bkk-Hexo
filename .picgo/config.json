@@ -1,0 +1,14 @@
+{
+  "picBed": {
+    "uploader": "github",
+    "github": {
+      "repo": "cestoon/BkkImage",
+      "branch": "main",
+      "token": "",
+      "path": "images/",
+      "customUrl": "https://raw.githubusercontent.com/cestoon/BkkImage/main"
+    },
+    "current": "github"
+  },
+  "picgoPlugins": {}
+}

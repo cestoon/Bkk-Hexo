@@ -63,7 +63,7 @@ tags: ["学习笔记", "分布式系统"]
    它是一个由许多不同类型计算机网络组成的庞大互联集合，一个非常庞大的分布式系统
 
    运行在连接到它上面的计算机上的程序通过传递消息进行交互，使用一种通用的通信方式（互联网协议），它使用户无论身在何处都能使用开放式服务（WWW、电子邮件、文件传输、多媒体服务等）。
-   <img src="/images/distributed/image-20230420214442981.png" alt="image-20230420214442981.png" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230420214442981.png" alt="image-20230420214442981.png" style="zoom:50%;" />
 
    而大家常常聊起来的物联网（IOT - internet of things），则是在互联网的基础上更进一步扩展了分布式的定义，在物联网中互相连接的是各种融入生活中的嵌入式计算设备。
 
@@ -175,7 +175,7 @@ Mark Weiser最早提到普适计算（Ubiquitous Computing），并设立了很�
 
   主要技术包括：group communication群组通信, publish subscribe systems 发布-订阅系统, message queues 消息队列, tuple spaces 元组空间, distributed shared memory (DSM) 分布式共享内存
 
-  <img src="/images/distributed/image-20230421163714428.png" alt="image-20230421163714428.png" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230421163714428.png" alt="image-20230421163714428.png" style="zoom:50%;" />
 
 在分布式系统中，进程间通信是指为进程之间的通信提供低级别的支持，包括消息传递原语、套接字编程和多播通信等技术。消息传递原语是指一组原始的通信操作，如发送和接收消息等，这些操作可以用于构建更高级别的通信机制。套接字编程是指使用套接字接口进行通信，通过网络套接字实现进程之间的数据传输和通信。多播通信是指向一组接收方发送单个数据包的通信方式，这种通信方式可用于提高通信效率和减少网络带宽占用。这些技术为分布式系统中的进程提供了通信支持，以实现高效和可靠的协作工作。
 
@@ -187,7 +187,7 @@ Mark Weiser最早提到普适计算（Ubiquitous Computing），并设立了很�
 
 先给出两种常见的架构风格**client- server & P2P**
 
-<img src="/images/distributed/image-20230421164518741.png" alt="image-20230421164518741.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230421164518741.png" alt="image-20230421164518741.png" style="zoom:50%;" />
 
 
 
@@ -224,7 +224,7 @@ web的主要技术有以下几个
 
 一个典型的网页加载过程
 
-<img src="/images/distributed/image-20230421171523873.png" alt="image-20230421171523873.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230421171523873.png" alt="image-20230421171523873.png" style="zoom:50%;" />
 
 **客户端与服务端的角色**：
 
@@ -303,7 +303,7 @@ web的主要技术有以下几个
 
 <h4 id="w1_communication_channels">进程与沟通信道</h4>
 
-<img src="/images/distributed/image-20230421180234711.png" alt="image-20230421180234711.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230421180234711.png" alt="image-20230421180234711.png" style="zoom:50%;" />
 
 一个进程p通过将消息m插入其发送消息缓冲区来执行发送操作 
 

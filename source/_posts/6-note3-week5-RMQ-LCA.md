@@ -42,7 +42,7 @@ RMQ和LCA都是计算机科学中重要的算法，在各种应用中被广泛�
 
 
 
-![image-20230427224938719](/images/Algorithm-big-data/image-20230427224938719.png)
+![image-20230427224938719](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230427224938719.png)
 
 对于Range Minimum Queries问题，预处理一个数组A，让他实现RMQ(i,j)：返回A[i...j]中最小的元素
 
@@ -61,7 +61,7 @@ e.g. :RMQ(2,5) = 2 (index 4)
 
 <h3 id="Lowest-Common-Ancestor">2. Lowest Common Ancestor</h3>
 
-![image-20230427225022626](/images/Algorithm-big-data/image-20230427225022626.png)
+![image-20230427225022626](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230427225022626.png)
 
 对于公共祖先问题，预处理一棵树T，让他支持操作LCA(u,v)：返回节点u 和 v的最小公共祖先
 
@@ -77,7 +77,7 @@ e.g. :RMQ(2,5) = 2 (index 4)
 
 关于Level Ancestor问题，假定给一颗有根树T, 给定节点x和一个整数k，我们的目标是找到x节点的第k级祖先
 
-![image-20230506184507349](/images/Algorithm-big-data/image-20230506184507349.png)
+![image-20230506184507349](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230506184507349.png)
 
 当然，k不能大于x的深度。
 
@@ -88,7 +88,7 @@ e.g. :RMQ(2,5) = 2 (index 4)
 <h3 id="RMQ-sts">RMQ: Sparse table solution 稀疏表解法</h3>
 
 保存所有长度为 2 的幂的区间的结果
-![image-20230506164026376](/images/Algorithm-big-data/image-20230506164026376.png)
+![image-20230506164026376](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230506164026376.png)
 
 保存所有配对的答案空间太大了，为O(n^2)。这么干的话**空间O(nlogn)**
 
@@ -125,7 +125,7 @@ RMQ问题中，给定一个长度为n的数组A，要求找到A[i]到A[j]之间�
 
 解决方案2 ：**2-level solution 两层稀疏表方案** 
 
-![image-20230506171039384](/images/Algorithm-big-data/image-20230506171039384.png)
+![image-20230506171039384](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230506171039384.png)
 
 把数组A分为大小$\frac{1}{2}log n$的块，定义一个数组 A‘，大小|A'|=$\frac{2n}{logn}$,其中A'[i]保存第i个块的最小值。再定义一个同样大小的数组B，B[i]是第i个块的中A'[i]即最小值的位置。因为RMQ其实返回的也是最小值的位置而不是最小值，因此用B来追踪最小值从哪来。
 
@@ -154,7 +154,7 @@ RMQ问题中，给定一个长度为n的数组A，要求找到A[i]到A[j]之间�
 
 若观察一下，很多块的结构可能相同，我们需要存储的是所有正则化的块的答案
 
-![image-20230506175404412](/images/Algorithm-big-data/image-20230506175404412.png)
+![image-20230506175404412](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230506175404412.png)
 
 如图的X和Y, 可以把他们正则化，一共有多少个不同的正则化的块呢？
 
@@ -170,11 +170,11 @@ Lemma 4. 假设每个块的长度为$\frac{1}{2}*logn -1 = l$，则最多一共�
 
 <h3 id="RMQ-to-LCA">RMQ to LCA</h3>
 
-![image-20230506212212863](/images/Algorithm-big-data/image-20230506212212863.png)
+![image-20230506212212863](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230506212212863.png)
 
 其实不只是±1RMQ，其实LCA 和 RMQ 问题都可以在常数查询时间和线性存储空间下得到最优解，不过这需要先把RMQ问题约化为LCA然后再约化为±1RMQ，先从笛卡尔树（Cartesian tree）开始。
 
-![image-20230506212731598](/images/Algorithm-big-data/image-20230506212731598.png)
+![image-20230506212731598](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230506212731598.png)
 
 笛卡尔树（Cartesian Tree）是一种二叉树
 
@@ -198,7 +198,7 @@ LCA约化到±1RMQ的则需要用到 —— 欧拉遍历表示法（Euler tour r
 
 Eluer tour representation 按照上图的方式遍历
 
-![image-20230506213447455](/images/Algorithm-big-data/image-20230506213447455.png)
+![image-20230506213447455](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230506213447455.png)
 
 用E代表Eluer tour representation的路径，A代表E[i]的节点深度，R代表节点在E中第一个出现的值
 
@@ -218,7 +218,7 @@ E的大小是2n-1,构建他的时间是O(n)，总图预处理的时间为
 
 比如说整一个支持求和查询（sum queries）的线段树，以以下数组为例：
 
-<img src="/images/Algorithm-big-data/image-20230506225105269.png" alt="image-20230506225105269.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230506225105269.png" alt="image-20230506225105269.png" style="zoom:50%;" />
 
 每个内部节点的值是相应数组值的总和，并且可以计算为其左右子节点值的总和
 
@@ -235,7 +235,7 @@ segment trees 可以解决Dynamic Range Minimum Queries动态范围最小查询�
 - Add(i, k): Set A[i] = A[i] + k (k can be negative). 
 - RMQ(i,j)
 
-![image-20230427232044869](/images/Algorithm-big-data/image-20230427232044869.png)
+![image-20230427232044869](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230427232044869.png)
 
 比如说查询RMQ(5,13)：
 
@@ -247,13 +247,13 @@ segment trees 可以解决Dynamic Range Minimum Queries动态范围最小查询�
 
 至于说怎么实现Implementation，用一个数组就够了
 
-![image-20230506230757954](/images/Algorithm-big-data/image-20230506230757954.png)
+![image-20230506230757954](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230506230757954.png)
 
 数组大小是2n， 所以空间复杂度O(n)
 
 如果我们要更新，把Add(5,7)即5那里的值从1变成8
 
-![image-20230506230923885](/images/Algorithm-big-data/image-20230506230923885.png)
+![image-20230506230923885](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230506230923885.png)
 
 更新时间也就是树高O(logn)
 
@@ -263,7 +263,7 @@ segment trees 可以解决Dynamic Range Minimum Queries动态范围最小查询�
 
 > 如果一个算法的预处理时间为f(n)，查询时间为g(n)，我们将说该算法具有复杂度⟨f(n);g(n)⟩
 
-![image-20230427235607891](/images/Algorithm-big-data/image-20230427235607891.png)
+![image-20230427235607891](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230427235607891.png)
 
 接下来由浅入深的解决这个问题
 
@@ -282,7 +282,7 @@ segment trees 可以解决Dynamic Range Minimum Queries动态范围最小查询�
 3. **Solution3: jump pointers** 跳跃指针算法
 
    每个节点v存储1、2、4的祖先
-   <img src="/images/Algorithm-big-data/image-20230507001902516.png" alt="image-20230507001902516.png" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507001902516.png" alt="image-20230507001902516.png" style="zoom:50%;" />
 
    查询是通过反复跳转从节点到节点来回答的，每次跳跃超过当前祖先和目标祖先之间剩余层级的一半以上。因此，最坏情况下的跳跃次数受到 O(log n) 的限制。通过使用动态编程来填充跳跃指针来进行预处理。
 
@@ -304,7 +304,7 @@ segment trees 可以解决Dynamic Range Minimum Queries动态范围最小查询�
 
    在最坏的情况下，最长路径分解为k，k−1，...，2，1的最长路径，每个路径只有一个子节点，导致高度为O(√n)的数组树
 
-   <img src="/images/Algorithm-big-data/image-20230428001249052.png" alt="image-20230428001249052.png" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230428001249052.png" alt="image-20230428001249052.png" style="zoom:50%;" />
 
    **定理**：**任何从根节点到叶节点的路径都经过不超过O(√n)个长路径**。其中n是图中节点的数量
 
@@ -318,7 +318,7 @@ segment trees 可以解决Dynamic Range Minimum Queries动态范围最小查询�
 
    
 
-   ![image-20230428003507190](/images/Algorithm-big-data/image-20230428003507190.png)
+   ![image-20230428003507190](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230428003507190.png)
 
    **Ladder decomposition. :**
 
@@ -329,7 +329,7 @@ segment trees 可以解决Dynamic Range Minimum Queries动态范围最小查询�
 6. **Solution 6: Ladder Decomposition + Jump Pointers ** <O(n lg n), O(1)>
 
    这个算法的思想是将 jump pointers（算法 B）和 ladders（算法 D）结合起来。
-   <img src="/images/Algorithm-big-data/image-20230507004004651.png" alt="image-20230507004004651.png" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507004004651.png" alt="image-20230507004004651.png" style="zoom:50%;" />
 
    每个查询将使用一个 jump pointer 和一个 ladder 来到达所需节点。
 
@@ -348,9 +348,9 @@ segment trees 可以解决Dynamic Range Minimum Queries动态范围最小查询�
 
    所以，我们的目标是指定O(n/log n)个跳跃节点，尽可能地“覆盖”整个树。
 
-   ![image-20230507005852027](/images/Algorithm-big-data/image-20230507005852027.png)
+   ![image-20230507005852027](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507005852027.png)
 
-   ![image-20230428082038957](/images/Algorithm-big-data/image-20230428082038957.png)
+   ![image-20230428082038957](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230428082038957.png)
 
    **将树结构分成三个部分**
 
@@ -401,7 +401,7 @@ segment trees 可以解决Dynamic Range Minimum Queries动态范围最小查询�
 
    **解释3:Top-Bottom Decomposition 空间如何为O(n)**
 
-   ![image-20230507132013049](/images/Algorithm-big-data/image-20230507132013049.png)
+   ![image-20230507132013049](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230507132013049.png)
 
    先解释一下为何bottom tree 的空间为O(n)
 

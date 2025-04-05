@@ -54,7 +54,7 @@ tags: ["学习笔记", "人工智能", "多智能体系统"]
 
 举个例子就是推箱子：
 
-<img src="/images/MAS/image-20230413183102508.png" alt="image-20230413183102508.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230413183102508.png" alt="image-20230413183102508.png" style="zoom:50%;" />
 
 搜索问题的**正式定义**包括如下内容：
 
@@ -73,7 +73,7 @@ tags: ["学习笔记", "人工智能", "多智能体系统"]
 
 搜索问题最形象也最抽象的思考方法便是图论式的视觉化。
 
-<img src="/images/MAS/image-20230413183437894.png" alt="image-20230413183437894.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230413183437894.png" alt="image-20230413183437894.png" style="zoom:50%;" />
 
 每个状态和潜在的状态都是一个点，从$S_{0}$初始状态开始搜索，看能生长出多少结点，上图绿色部分是初识节点，蓝色前沿部分（frontier）是搜索出来可能走向的状态。
 
@@ -90,7 +90,7 @@ tags: ["学习笔记", "人工智能", "多智能体系统"]
 
 不同frontier的数据保存方式影响的是搜索所有状态的时候，选择的路径不同
 
-<img src="/images/MAS/image-20230413185935143.png" alt="image-20230413185935143.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230413185935143.png" alt="image-20230413185935143.png" style="zoom:50%;" />
 
 广度优先（BFS）是a, b, c, d, e, f, ,g, h, i, j, k的顺序，优先搜索高层级的状态。
 
@@ -156,7 +156,7 @@ h(s)也被称为启发函数（**heuristic function**）
 
 <h3 id="w2_Gripper_problem">Gripper problem 抓手问题</h3>
 
-<img src="/images/MAS/image-20230413215101020.png" alt="image-20230413215101020.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230413215101020.png" alt="image-20230413215101020.png" style="zoom:50%;" />
 
 **抓手问题**：把n个箱子用一个抓手从A挪到B
 
@@ -245,7 +245,7 @@ PDDL由斯坦福为机器人 Shakey 开发的STRIPS语言衍生而来，使用�
 
 1. **Action schemas** 动作模式
    PDDL用一个模版去描述一个动作，格式如下
-   <img src="/images/MAS/image-20230414123240073.png" alt="image-20230414123240073.png" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230414123240073.png" alt="image-20230414123240073.png" style="zoom:50%;" />
    由动作名、前提条件、结果三部分组成
 
 2. **Goal 目标**， 
@@ -258,7 +258,7 @@ PDDL由斯坦福为机器人 Shakey 开发的STRIPS语言衍生而来，使用�
 4. **planning problem 规划问题**
    使用以上的概念， 就可以将规划问题描述为一个三元组 tripe($A, S_{0}, g$)
    A是规划域， $S_{0}$是初始状态， g是目标。
-   <img src="/images/MAS/image-20230414123834709.png" alt="image-20230414123834709.png" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230414123834709.png" alt="image-20230414123834709.png" style="zoom:50%;" />
 
 5. **Gound actions 基础动作** ：
    特指一个Action schemas动作模式中所有变量都是常量的动作模式
@@ -285,7 +285,7 @@ PDDL由斯坦福为机器人 Shakey 开发的STRIPS语言衍生而来，使用�
 
 search和PDDL的对比
 
-<img src="/images/MAS/image-20230414122607166.png" alt="image-20230414122607166.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230414122607166.png" alt="image-20230414122607166.png" style="zoom:50%;" />
 
 可以发现PDDL用atoms的组合代替了节点去表达state和goal，图搜索的边也用一套动作模式表示，规划则用一系列的动作表示，所有这一切都是为了更能突出状态和动作的内部结构。
 
@@ -315,12 +315,12 @@ search和PDDL的对比
 1. **Ignore preconditions and non-goal literals heuristic**
 
 设计启发式需要从松弛问题入手，这个场景松弛的比较彻底，先直接把所有的前提条件和目标不需要的literals全部忽略，用$h_{ip}$表示：
-<img src="/images/MAS/image-20230414134140416.png" alt="image-20230414134140416.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230414134140416.png" alt="image-20230414134140416.png" style="zoom:50%;" />
 
 2. **Delete-relaxation heuristic**
 
 通过去掉动作effect的所有否定的literals, 用$h^{+}$表示：
-<img src="/images/MAS/image-20230414134423934.png" alt="image-20230414134423934.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230414134423934.png" alt="image-20230414134423934.png" style="zoom:50%;" />
 用的不多，因为计算$h^{+}$属于NP-hard问题
 
 3. **Additive heuristic 加法启发式**
@@ -334,7 +334,7 @@ search和PDDL的对比
 
    毕竟有悲观的估计，所以可能$h_{add}>h*$，并不是一个合适的启发式，不过它易上手，而且可以用一个递归的方式来定义：
 
-   <img src="/images/MAS/image-20230415171830418.png" alt="image-20230415171830418.png" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230415171830418.png" alt="image-20230415171830418.png" style="zoom:50%;" />
 
    其实就是把完成每个子目标的启发值加起来，不过每个子目标有多个处理方案且启发值不同，所以取最小的那个。即便如此，$h_{add}>h*$，因为它忽略了子目标之间的关系，强迫子问题必须一个一个解决，追求局部最优解的同时忽略了全局最优解
 

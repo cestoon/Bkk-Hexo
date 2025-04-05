@@ -58,7 +58,7 @@ tags: ["算法", "数据结构", "学习笔记"]
 
 假设有一个由s个字符串Si（1≤i≤s）组成的集合S，且S中没有任何一个字符串是另一个字符串的前缀，alphabet为 Σ。让S的总长度为n；一个字符串S由一个 root-to-leaf path $T_s$表示
 
-![image-20230508125158725](/images/Algorithm-big-data/image-20230508125158725.png)
+![image-20230508125158725](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508125158725.png)
 
 比如这个tries由sells\$, by\$, the\$, sea\$, shells\$, tea\$, she\$.这些字符串组成。
 
@@ -99,7 +99,7 @@ Trie中的任意一个节点v都代表由根节点到v路径上所有边标记�
 
 在字符串集合S上构建的Trie $T_s$ 可能会有许多只有一个子节点的节点，也可能会存在由许多单子节点节点组成的长路径。为了解决这个问题，我们可以将这样的路径压缩成单条边，构建一棵新的树T
 
-![image-20230508132459808](/images/Algorithm-big-data/image-20230508132459808.png)
+![image-20230508132459808](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508132459808.png)
 
 紧凑Trie是一个存储由字符集大小为d的s个总长度为n的字符串集合S的Trie T，具有以下性质
 
@@ -132,10 +132,10 @@ Trie中的任意一个节点v都代表由根节点到v路径上所有边标记�
 
 后缀树中的每个叶子节点都有一个数字，表示它对应于S的哪个后缀。
 
-<img src="/images/Algorithm-big-data/image-20230508133642855.png" alt="image-20230508133642855.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508133642855.png" alt="image-20230508133642855.png" style="zoom:50%;" />
 
 在存储中并不会标上字符而是索引，这里是为了清晰哈，实际上应该长这样
-<img src="/images/Algorithm-big-data/image-20230508134032028.png" alt="image-20230508134032028.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508134032028.png" alt="image-20230508134032028.png" style="zoom:50%;" />
 
 #### 搜索
 
@@ -168,7 +168,7 @@ Trie中的任意一个节点v都代表由根节点到v路径上所有边标记�
 
 <h4 id="Applications-Longest-Common-Substring">Applications: Longest Common Substring 最长公共子串</h4>
 
-<img src="/images/Algorithm-big-data/image-20230508135816331.png" alt="image-20230508135816331.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508135816331.png" alt="image-20230508135816331.png" style="zoom:50%;" />
 
 对于两字字符串S1、S2。对 S1\$S2\$.构建后缀树，然后找到他们的最长公共子串。
 
@@ -198,7 +198,7 @@ S1和S2的最长公共子串是在具有$1和$2子树的节点中具有最深字
 
 **stable sort 稳定排序**：指当有相等元素存在时，排序前和排序后它们的相对位置不会改变的排序算法
 
-<img src="/images/Algorithm-big-data/image-20230508142216523.png" alt="image-20230508142216523.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508142216523.png" alt="image-20230508142216523.png" style="zoom:50%;" />
 
 这个例子，n=10, k=3
 
@@ -237,11 +237,11 @@ radix_sort(A, n, k):
 
 还是S=yabbadabbado举例子，suffix tree可以参考上文。把它按照**字典顺序**排
 
-![image-20230508145113196](/images/Algorithm-big-data/image-20230508145113196.png)
+![image-20230508145113196](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508145113196.png)
 
 **后缀数组 Suffix array**： 也就是后缀排序后的数组
 
-![image-20230508145159657](/images/Algorithm-big-data/image-20230508145159657.png)
+![image-20230508145159657](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508145159657.png)
 
 **后缀排序的目标**：快速计算字符串S的所有后缀的字典序。 
 
@@ -255,13 +255,13 @@ radix_sort(A, n, k):
 
 <h4 id="Solution-1-Radix-Sort">解决方案1 Radix Sort</h4>
 
-<img src="/images/Algorithm-big-data/image-20230508145626842.png" alt="image-20230508145626842.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508145626842.png" alt="image-20230508145626842.png" style="zoom:50%;" />
 
 生成所有的后缀，用\$填充，时间O($n^2$)
 
 <h4 id="Solution-2-Prefix-doubling">解决方案2：前缀加倍 Prefix doubling</h4>
 
-<img src="/images/Algorithm-big-data/image-20230508150027132.png" alt="image-20230508150027132.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508150027132.png" alt="image-20230508150027132.png" style="zoom:50%;" />
 
 位数1、2、4、8然后依次来做排序（位数不够的\$填充），每次使用radix sort对上个步骤的进行排序.
 
@@ -283,23 +283,23 @@ radix_sort(A, n, k):
 
   - 对T0,T1进行递归，对样本后缀进行排序。这里排序用radix sort
 
-  <img src="/images/Algorithm-big-data/image-20230508150742355.png" alt="image-20230508150742355.png" style="zoom:50%;" /> 👉<img src="/images/Algorithm-big-data/image-20230508150840733.png" alt="image-20230508150840733.png" style="zoom:50%;" />👉<img src="/images/Algorithm-big-data/image-20230508150901637.png" alt="image-20230508150901637.png" style="zoom:50%;" /> 👉 <img src="/images/Algorithm-big-data/image-20230508151145861.png" alt="image-20230508151145861.png" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508150742355.png" alt="image-20230508150742355.png" style="zoom:50%;" /> 👉<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508150840733.png" alt="image-20230508150840733.png" style="zoom:50%;" />👉<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508150901637.png" alt="image-20230508150901637.png" style="zoom:50%;" /> 👉 <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508151145861.png" alt="image-20230508151145861.png" style="zoom:50%;" />
 
 - **步骤2. 排序非样本后缀 Sort non-sample suffixes**
 
   - 对于余数为0的位置i，排序剩余的后缀。同样可以用radix sort
 
-  <img src="/images/Algorithm-big-data/image-20230508151407243.png" alt="image-20230508151407243.png" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508151407243.png" alt="image-20230508151407243.png" style="zoom:50%;" />
 
 - 步骤3. 合并样本后缀和非样本后缀。
 
   给顶两个指针i、j。因为T1和T2是已经排序过了的，让i在T1 T2排序后的内容里走，j在T0里面走
 
-  <img src="/images/Algorithm-big-data/image-20230508154222797.png" alt="image-20230508154222797.png" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508154222797.png" alt="image-20230508154222797.png" style="zoom:50%;" />
 
   i，j都从1开始，比较i、j所指的字符，按照字典顺序排序，如果字符一样，就根据指针数据排序，如果有跨区的情况，就增加位数。
 
-  <img src="/images/Algorithm-big-data/image-20230508154444722.png" alt="image-20230508154444722.png" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508154444722.png" alt="image-20230508154444722.png" style="zoom:50%;" />
 
 **方案3 Difference Cover Sampling DC3分析：**
 
@@ -362,7 +362,7 @@ Kolmogorov压缩。
 - 选择最长的匹配子字符串，输出一个三元组（p，n，c），其中包含匹配在窗口中的位置p，匹配长度n和匹配后面的下一个字符c
 - 通过（前一个出现的距离、长度、额外字符）或单个字符对短语进行编码
 
-<img src="/images/Algorithm-big-data/image-20230508164650747.png" alt="image-20230508164650747.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508164650747.png" alt="image-20230508164650747.png" style="zoom:50%;" />
 
 **编码2:** 
 
@@ -388,13 +388,13 @@ Read and decode left-to-right.，时间O(n)
 - 选择之前出现过的最长短语加上一个单独字符。 
 - 编码短语（前一短语，字符）或单个短语。
 
-<img src="/images/Algorithm-big-data/image-20230508172612910.png" alt="image-20230508172612910.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508172612910.png" alt="image-20230508172612910.png" style="zoom:50%;" />
 
 **编码2**:
 
 - 动态构建和遍历LZ78 trie（字典树）
 
-![image-20230508172803162](/images/Algorithm-big-data/image-20230508172803162.png)
+![image-20230508172803162](https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508172803162.png)
 
 - 时间：O(n)：Read and decode left-to-right.，时间O(n)
 
@@ -404,13 +404,13 @@ Read and decode left-to-right.，时间O(n)
 
 <h4 id="Re-Pair-compression">Re-Pair compression 重新配对压缩</h4>
 
-<img src="/images/Algorithm-big-data/image-20230508180827045.png" alt="image-20230508180827045.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508180827045.png" alt="image-20230508180827045.png" style="zoom:50%;" />
 
 找到重复次数最多的用Xi替代，最后直到只有一组配对
 
 <h4 id="Grammars-compression">Grammars compression 语法压缩</h4>
 
-<img src="/images/Algorithm-big-data/image-20230508180926105.png" alt="image-20230508180926105.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230508180926105.png" alt="image-20230508180926105.png" style="zoom:50%;" />
 
 
 

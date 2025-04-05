@@ -32,7 +32,7 @@ tags: ["学习笔记", "人工智能", "多智能体系统"]
 
 继续聊规划问题。一个好的规划有一个难点，即可序列化子目标的规划问题：存在子目标的顺序，它们应该按顺序实现而不会破坏任何先前实现的子目标。
 
-如下图推箱子：<img src="/images/MAS/image-20230415231658887.png" alt="image-20230415231658887.png" style="zoom:31%;" />
+如下图推箱子：<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230415231658887.png" alt="image-20230415231658887.png" style="zoom:31%;" />
 
 每个箱子都是一个小目标，但实现小目标的顺序对计算量的影响很大；但在之前聊过的抓手问题中，顺序并不重要；在机器流水线安装过程中，顺序则可能是唯一的。
 
@@ -71,7 +71,7 @@ tags: ["学习笔记", "人工智能", "多智能体系统"]
 
 3. **Solution 解决方案**： 如果一个偏序关系≺的任何一种线性化都构成了一个计划（从起始状态到目标状态的动作序列），那么这个偏序关系被称为一个计划问题的解决方案。使用偏序关系作为计划问题的解决方案可以使得计划问题更加灵活、可扩展、高效和可解释
 
-   <img src="/images/MAS/image-20230416132549265.png" alt="image-20230416132549265.png" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230416132549265.png" alt="image-20230416132549265.png" style="zoom:50%;" />
 
    4. **Ordering constraints 顺序约束**： 
       1. A ≺ B ，其中 A 和 B 是动作。解释：动作 A 必须先于动作 B。
@@ -79,7 +79,7 @@ tags: ["学习笔记", "人工智能", "多智能体系统"]
    5. **部分有序计划（Partially Ordered Plans）**：
       - 一个有向图，node代表action
       - Edge 代表动作之间的顺序约束ordering constraints
-        <img src="/images/MAS/image-20230416143214943.png" alt="image-20230416143214943.png" style="zoom:50%;" />
+        <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230416143214943.png" alt="image-20230416143214943.png" style="zoom:50%;" />
 
    6. **Open preconditions 开放先决条件**：
       上接4.2， c就是B的先觉条件。如果c在计划中没有任何操作实现它，那么这个前置条件就是**开放(open)**的，也就是说，计划中不包含任何形如A≤B 的顺序约束
@@ -105,13 +105,13 @@ tags: ["学习笔记", "人工智能", "多智能体系统"]
 2. 开始：一个动作，规划问题的开始状态描述为该动作的效果
 3. 结束：一个动作，规划问题的目标状态为该动作的前提条件
 4. 步骤： 选一个开放条件c对应动作B，然后选一个能完成c的动作A
-   1. 添加顺序约束<img src="/images/MAS/image-20230416134205498.png" alt="image-20230416134205498.png" style="zoom:50%;" />
+   1. 添加顺序约束<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230416134205498.png" alt="image-20230416134205498.png" style="zoom:50%;" />
    2. 解决所有冲突
 5. 回溯：如果一个前提条件无法被解决或者某些冲突无法被解决
 
 抓手问题的POP实例：
 
-<img src="/images/MAS/image-20230416152302569.png" alt="image-20230416152302569.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230416152302569.png" alt="image-20230416152302569.png" style="zoom:50%;" />
 
 
 
@@ -119,7 +119,7 @@ tags: ["学习笔记", "人工智能", "多智能体系统"]
 
 部分偏序计划和空间状态是对偶的（他们都是空间有向图），一边的节点是另一边的线。
 
-<img src="/images/MAS/image-20230416152844008.png" alt="image-20230416152844008.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230416152844008.png" alt="image-20230416152844008.png" style="zoom:50%;" />
 
 <h4 id="w4_pop">POP 小结</h4>
 
@@ -157,7 +157,7 @@ HTN 细化模式（**refinement schemas**）表示。细化模式由以下元素
 - **Steps**： 一串动作，可以是基础动作，也可以是高级动作，写法：[Buy(x, Shop), Buy(y, Shop)] or [Go(x, z, r), Navigate(z, y)].
 
   例子：
-  <img src="/images/MAS/image-20230416160136149.png" alt="image-20230416160136149.png" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230416160136149.png" alt="image-20230416160136149.png" style="zoom:50%;" />
 
 - **multiple refinement 多重细化**：同一个高级动作可以有很多的细化模式
 
@@ -168,16 +168,16 @@ HTN 细化模式（**refinement schemas**）表示。细化模式由以下元素
 - **Representing high-level actions 高级动作表示法**： 
   使用 PDDL/STRIPS 动作模式来表示，Navigate(x, y)可以这么写：
 
-  <img src="/images/MAS/image-20230416162752586.png" alt="image-20230416162752586.png" style="zoom:30%;" />
+  <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230416162752586.png" alt="image-20230416162752586.png" style="zoom:30%;" />
 
 <h4 id="w4_HTN_Planning_example">HTN planning example - HTN规划示例</h4>
 
-<img src="/images/MAS/image-20230416162005613.png" alt="image-20230416162005613.png" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230416162005613.png" alt="image-20230416162005613.png" style="zoom:30%;" />
 
 假设有一个机器人Shakey位于房间1, 目标是到达L3，初始状态如上，要执行HLA Navigate(L1, L3)的操作，即从L1引导机器人到L3
 
 细化模式如下：
-<img src="/images/MAS/image-20230416162142482.png" alt="image-20230416162142482.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230416162142482.png" alt="image-20230416162142482.png" style="zoom:50%;" />
 
 HLA Navigate(L1, L3)的实现分为一下几步：
 
@@ -189,13 +189,13 @@ HLA Navigate(L1, L3)的实现分为一下几步：
 
 再复杂化这个例子，要把箱子从L2推到L3,可以如下拆分实现
 
-<img src="/images/MAS/image-20230416163623089.png" alt="image-20230416163623089.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230416163623089.png" alt="image-20230416163623089.png" style="zoom:50%;" />
 
 <h4 id="w4_HTN">HTN 小结</h4>
 
 HTN的最大优势：可以以沿轴从纯命令式（无搜索）到纯声明式（仅搜索）任意调整
 
-<img src="/images/MAS/image-20230416164031480.png" alt="image-20230416164031480.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230416164031480.png" alt="image-20230416164031480.png" style="zoom:50%;" />
 
 换句话说，拆分子任务可以拆出不同风格
 - 拆的粗一点，几步就好。
@@ -270,7 +270,7 @@ CDPS 终点需要考虑两个问题：
 2. 子问题解决1: 然后机器人规划安排自己的运输任务
 3. 子问题解决2: 分享结果，每个个体广播自己的计划
 4. 子问题解决3: 如果资源冲突，造成冲突的机器人需要再规划。
-   <img src="/images/MAS/image-20230416213453453.png" alt="image-20230416213453453.png" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230416213453453.png" alt="image-20230416213453453.png" style="zoom:50%;" />
    如图，如果s占用了r的资源，s需要广播，r就得改计划。如果r改不了计划，就会陷入死锁。这种情况下，r需要执行中心规划（多体规划），来为这个子问题相关的机器人解除死锁。
 
 在玛莎项目中，能够把问题复杂度减少至线性的。在智能体之中分配任务规划只是任务分解的一种。
@@ -299,11 +299,11 @@ PGP则是下级提目标，然后上级再协调，然后再做
 - **非序列化的(Non-Serialisable)子目标：** 子目标无法序列化，然而可以执行一个更高级的合并后的计划，这个涉及到**计划合并**（各个计划的调度/同步）。
 
 ##### **子目标交互示例**：
-<img src="/images/MAS/image-20230416220746518.png" alt="image-20230416220746518.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230416220746518.png" alt="image-20230416220746518.png" style="zoom:50%;" />
 假设有俩子目标 On(A,B) On(B,C), 然后一个蓝色agent分配了子目标 On(A,B)，红色agent 分配了 On(B,C)。很明显他们不能同时执行，因为这里有**并发动作约束**（ **Concurrent action constraints**：约束哪些动作必须或不能与一个动作同时执行），需要协调。
 
 红蓝智能体的计划如下：
 
-<img src="/images/MAS/image-20230416220927730.png" alt="image-20230416220927730.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/cestoon/BkkImage/main/images/image-20230416220927730.png" alt="image-20230416220927730.png" style="zoom:50%;" />
 然鹅，冲突了，若c上有B就不能把c放在桌子上了（用precondition判断）
 解决方案就是，蓝色先执行其计划的第一个动作，然后红色agent再执行它的动作。
