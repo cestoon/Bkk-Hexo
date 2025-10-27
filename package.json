@@ -22,7 +22,7 @@
     "dotenv": "^16.4.7",
     "fs-extra": "^11.3.0",
     "glob": "^11.0.1",
-    "hexo": "^7.3.0",
+    "hexo": "^8.1.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^4.0.0",
